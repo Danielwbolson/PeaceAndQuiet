@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4815390348858342}
   - component: {fileID: 114026274210314880}
+  - component: {fileID: 114204563237009662}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -52,3 +53,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DifficultyPanel: {fileID: 0}
+  InfoPanel: {fileID: 118084, guid: 5176b00ac464c5940a4a2ac343e10da2, type: 2}
+--- !u!114 &114204563237009662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973100392265088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d23a7d8b8c2f124e806f1f6df6be099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

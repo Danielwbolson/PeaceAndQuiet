@@ -12,7 +12,10 @@ public class emptyField : MonoBehaviour {
 		isEmpty = true;
 
 	void Start() {
-		oldSprite = this.GetComponent<SpriteRenderer>().sprite;
+		oldSprite = GetComponent<SpriteRenderer>().sprite;
+		if(transform.childCount != 0) {
+			isEmpty = false;
+		}
 	}
 
 	void OnMouseOver() {
@@ -33,12 +36,12 @@ public class emptyField : MonoBehaviour {
 
 	void OnMouseEnter() {
 		if(isEmpty && GameObject.FindGameObjectWithTag("Menu") == null) {
-			this.GetComponent<SpriteRenderer>().sprite = newSprite;
+			GetComponent<SpriteRenderer>().sprite = newSprite;
 		}
 	}
 
 	void OnMouseExit() {
-		this.GetComponent<SpriteRenderer>().sprite = oldSprite;
+		GetComponent<SpriteRenderer>().sprite = oldSprite;
 	}
 	
 	//needs to change mouse position to game positon

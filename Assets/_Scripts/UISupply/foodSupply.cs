@@ -11,6 +11,6 @@ public class foodSupply : MonoBehaviour {
 	}
 
 	void Update() {
-		this.GetComponent<Text>().text = ResourceSupply.GetComponent<ResourceSupply>().foodsupply.ToString();
+		this.GetComponent<Text>().text = ResourceSupply.GetComponent<UiInfo>().foodsupply.ToString();
 	}
 }

@@ -7,6 +7,8 @@ public class ResourceTile : MonoBehaviour {
 	public float WhatLevel;
 
 	public float IndividualOutput;
+
+	public int plusPopulation = 4;
 	
 	public GameObject upgradeMenu;
 	public GameObject nextBuilding;
@@ -14,12 +16,16 @@ public class ResourceTile : MonoBehaviour {
 	void Start() {
 		if(whatBuildingIsThis == "Farm") {
 			Controller.foodSupplyRate += IndividualOutput;
+			Controller.NumOfFarms += 1;
 		} else if(whatBuildingIsThis == "Lumber Camp") {
 			Controller.woodSupplyRate += IndividualOutput;
+			Controller.NumOfLumberCamps += 1;
 		} else if(whatBuildingIsThis == "Mine") {
 			Controller.metalSupplyRate += IndividualOutput;
+			Controller.NumOfMines += 1;
 		} else if(whatBuildingIsThis == "Quarry") {
 			Controller.stoneSupplyRate += IndividualOutput;
+			Controller.NumOfQuarries += 1;
 		}
 	}
 	

@@ -10,6 +10,6 @@ public class WoodSupply : MonoBehaviour {
 	}
 
 	void Update() {
-		this.GetComponent<Text>().text = ResourceSupply.GetComponent<ResourceSupply>().woodsupply;
+		this.GetComponent<Text>().text = ResourceSupply.GetComponent<UiInfo>().woodsupply;
 	}
 }

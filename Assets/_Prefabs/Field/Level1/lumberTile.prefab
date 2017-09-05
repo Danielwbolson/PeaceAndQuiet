@@ -73,6 +73,7 @@ MonoBehaviour:
   whatResource: wood
   WhatLevel: 1
   IndividualOutput: 5
+  plusPopulation: 4
   upgradeMenu: {fileID: 114954, guid: 6e5b6e7f6a5789a48b0395e740d7b547, type: 2}
   nextBuilding: {fileID: 127674, guid: d54583a0f950ca34eb9b1d35a81a0334, type: 2}
 --- !u!212 &21200454

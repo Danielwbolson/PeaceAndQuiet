@@ -26,7 +26,7 @@ public class CityBuilding : MonoBehaviour {
 		else if (building == "Castle")
 			Controller.Castle = true;
 		else if (building == "House")
-			Controller.Population += 6;
+			Debug.Log("House was built");
 		else if (building == "Barracks")
 			Debug.Log("Barracks built");
 			//Troop speed, happiness

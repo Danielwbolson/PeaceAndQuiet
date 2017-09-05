@@ -6,14 +6,17 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
 	public GameObject DifficultyPanel;
+	public GameObject InfoPanel;
 
 	public void LoadField()
 	{
+
 		SceneManager.LoadScene("Field", LoadSceneMode.Single);
 	}
 
 	public void LoadCastle()
 	{
+
 		SceneManager.LoadScene("City", LoadSceneMode.Single);
 	}
 

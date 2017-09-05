@@ -11,6 +11,6 @@ public class StoneSupply : MonoBehaviour {
 	}
 
 	void Update() {
-		this.GetComponent<Text>().text = ResourceSupply.GetComponent<ResourceSupply>().stonesupply;
+		this.GetComponent<Text>().text = ResourceSupply.GetComponent<UiInfo>().stonesupply;
 	}
 }

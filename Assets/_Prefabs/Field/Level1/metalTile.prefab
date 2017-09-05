@@ -73,6 +73,7 @@ MonoBehaviour:
   whatResource: metal
   WhatLevel: 1
   IndividualOutput: 5
+  plusPopulation: 4
   upgradeMenu: {fileID: 114954, guid: 6e5b6e7f6a5789a48b0395e740d7b547, type: 2}
   nextBuilding: {fileID: 112618, guid: 3bb4dd2be018cc74c92371fc72436cea, type: 2}
 --- !u!212 &21238316
