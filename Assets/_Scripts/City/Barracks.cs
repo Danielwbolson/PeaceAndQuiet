@@ -6,7 +6,7 @@ public class Barracks : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Controller.troopProductionMultiplier += 0.1f;
+		Controller.troopProductionMultiplier *= 1.1f;
 	}
 	
 	// Update is called once per frame

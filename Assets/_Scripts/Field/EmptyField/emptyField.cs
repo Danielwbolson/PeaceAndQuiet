@@ -18,6 +18,11 @@ public class emptyField : MonoBehaviour {
 		}
 	}
 
+	private void Update() {
+		if (!isEmpty) {
+			transform.GetComponent<SpriteRenderer>().enabled = false;
+		} else transform.GetComponent<SpriteRenderer>().enabled = true;
+	}
 	void OnMouseOver() {
 		//Debug.Log("Over empty field");
 		if(GameObject.FindGameObjectWithTag("Menu") == null) {

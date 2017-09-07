@@ -11,6 +11,7 @@ public class buildPanelButton : MonoBehaviour {
 		if (CheckBuildCosts()) {
 			if (CheckPopulation()) {
 				GameObject fieldBuilding = Instantiate(ResourceBuilding, Controller.whatWasClicked.transform.position, Quaternion.identity) as GameObject;
+				fieldBuilding.GetComponent<ResourceTile>().wasBuilt = true;
 				fieldBuilding.transform.parent = Controller.whatWasClicked.transform;
 
 				fieldBuilding.transform.parent.GetComponent<emptyField>().isEmpty = false;

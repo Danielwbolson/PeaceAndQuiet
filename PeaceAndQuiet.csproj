@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -100,9 +103,11 @@
     <Compile Include="Assets\_Scripts\FirstBuildCost.cs" />
     <Compile Include="Assets\_Scripts\System\CameraMove.cs" />
     <Compile Include="Assets\_Scripts\System\Controller.cs" />
-    <Compile Include="Assets\_Scripts\System\DontDestroy.cs" />
+    <Compile Include="Assets\_Scripts\System\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\_Scripts\System\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\System\MusicPlayer.cs" />
+    <Compile Include="Assets\_Scripts\System\SaveManager.cs" />
+    <Compile Include="Assets\_Scripts\System\Singleton.cs" />
     <Compile Include="Assets\_Scripts\UISupply\MetalSupply.cs" />
     <Compile Include="Assets\_Scripts\UISupply\StoneSupply.cs" />
     <Compile Include="Assets\_Scripts\UISupply\UIPopulation.cs" />

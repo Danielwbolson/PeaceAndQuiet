@@ -72,8 +72,10 @@ MonoBehaviour:
   whatResource: 'food '
   WhatLevel: 2
   IndividualOutput: 10
+  plusPopulation: 4
   upgradeMenu: {fileID: 114954, guid: 6e5b6e7f6a5789a48b0395e740d7b547, type: 2}
   nextBuilding: {fileID: 0}
+  emptyFieldPrefab: {fileID: 128140, guid: e500c438394302d47b702867e92681f8, type: 2}
 --- !u!212 &21295988
 SpriteRenderer:
   m_ObjectHideFlags: 1

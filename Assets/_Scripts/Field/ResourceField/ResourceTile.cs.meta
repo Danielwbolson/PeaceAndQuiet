@@ -1,8 +1,15 @@
 fileFormatVersion: 2
 guid: 810168f35607f0840a6900f8c40e24ec
+timeCreated: 1504791728
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - upgradeMenu: {instanceID: 0}
+  - nextBuilding: {instanceID: 0}
+  - emptyFieldPrefab: {fileID: 128140, guid: e500c438394302d47b702867e92681f8, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

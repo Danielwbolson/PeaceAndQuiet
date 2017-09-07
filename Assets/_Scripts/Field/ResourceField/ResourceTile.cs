@@ -12,23 +12,36 @@ public class ResourceTile : MonoBehaviour {
 	
 	public GameObject upgradeMenu;
 	public GameObject nextBuilding;
-	
+	public LayerMask layerMask;
+	public bool wasBuilt = false;
+
 	void Start() {
-		if(whatBuildingIsThis == "Farm") {
-			Controller.foodSupplyRate += IndividualOutput;
-			Controller.NumOfFarms += 1;
-		} else if(whatBuildingIsThis == "Lumber Camp") {
-			Controller.woodSupplyRate += IndividualOutput;
-			Controller.NumOfLumberCamps += 1;
-		} else if(whatBuildingIsThis == "Mine") {
-			Controller.metalSupplyRate += IndividualOutput;
-			Controller.NumOfMines += 1;
-		} else if(whatBuildingIsThis == "Quarry") {
-			Controller.stoneSupplyRate += IndividualOutput;
-			Controller.NumOfQuarries += 1;
+		if (!wasBuilt) {
+			Vector2 location = new Vector2(1f, 1f);
+			Collider2D collider = Physics2D.OverlapBox(transform.position, location, 0f, LayerMask.GetMask("EmptyField"), -Mathf.Infinity, Mathf.Infinity);
+			//Debug.Log(LayerMask.LayerToName(LayerMask.GetMask("EmptyField")));
+			if (collider.gameObject != null) {
+				transform.SetParent(collider.gameObject.transform);
+				transform.parent.GetComponent<emptyField>().isEmpty = false;
+			}
+		}
+		if (wasBuilt) {
+			if (whatResource == "food") {
+				Controller.foodSupplyRate += IndividualOutput;
+				Controller.NumOfFarms += 1;
+			} else if (whatResource == "wood") {
+				Controller.woodSupplyRate += IndividualOutput;
+				Controller.NumOfLumberCamps += 1;
+			} else if (whatResource == "metal") {
+				Controller.metalSupplyRate += IndividualOutput;
+				Controller.NumOfMines += 1;
+			} else if (whatResource == "stone") {
+				Controller.stoneSupplyRate += IndividualOutput;
+				Controller.NumOfQuarries += 1;
+			}
 		}
 	}
-	
+
 	void OnMouseOver() {
 		//Debug.Log("over resource");
 		if(Input.GetMouseButtonDown(0) && GameObject.FindGameObjectWithTag("Menu") == null) {
@@ -37,13 +50,13 @@ public class ResourceTile : MonoBehaviour {
 		}
 	}
 	void OnDestroy() {
-		if (whatBuildingIsThis == "Farm") {
+		if (whatResource == "food") {
 			Controller.foodSupplyRate -= IndividualOutput;
-		} else if (whatBuildingIsThis == "Lumber Camp") {
+		} else if (whatResource == "wood") {
 			Controller.woodSupplyRate -= IndividualOutput;
-		} else if (whatBuildingIsThis == "Mine") {
+		} else if (whatResource == "metal") {
 			Controller.metalSupplyRate -= IndividualOutput;
-		} else if (whatBuildingIsThis == "Quarry") {
+		} else if (whatResource == "stone") {
 			Controller.stoneSupplyRate -= IndividualOutput;
 		}
 	}

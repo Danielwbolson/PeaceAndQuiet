@@ -69,13 +69,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810168f35607f0840a6900f8c40e24ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatBuildingIsThis: Quarry
+  whatBuildingIsThis: stoneTile
   whatResource: stone
   WhatLevel: 1
   IndividualOutput: 5
   plusPopulation: 4
   upgradeMenu: {fileID: 114954, guid: 6e5b6e7f6a5789a48b0395e740d7b547, type: 2}
   nextBuilding: {fileID: 116392, guid: 6ab71009f939e704090ee1c5097752c4, type: 2}
+  emptyFieldPrefab: {fileID: 128140, guid: e500c438394302d47b702867e92681f8, type: 2}
 --- !u!212 &21298324
 SpriteRenderer:
   m_ObjectHideFlags: 1

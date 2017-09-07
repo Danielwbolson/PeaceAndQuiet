@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class infoText : MonoBehaviour {
 
-	public string difficulty, farmNum, woodNum, metalNum, stoneNum;
+	public string difficulty, farmNum, woodNum, metalNum, stoneNum, troopRate;
 
 	// Use this for initialization
 	void Update () {
@@ -13,8 +13,9 @@ public class infoText : MonoBehaviour {
 		farmNum = "Farms: " + Controller.NumOfFarms.ToString() + "\n";
 		woodNum = "Lumber Camps: " + Controller.NumOfLumberCamps.ToString() + "\n";
 		metalNum = "Mines: " + Controller.NumOfMines.ToString() + "\n";
-		stoneNum = "Quarries: " + Controller.NumOfQuarries.ToString();
+		stoneNum = "Quarries: " + Controller.NumOfQuarries.ToString() + "\n\n";
+		troopRate = "Troop Production Multiplier: " + Controller.troopProductionMultiplier.ToString("#.00");
 
-		GetComponent<Text>().text = difficulty + farmNum + woodNum + metalNum + stoneNum;
+		GetComponent<Text>().text = difficulty + farmNum + woodNum + metalNum + stoneNum + troopRate;
 	}
 }
