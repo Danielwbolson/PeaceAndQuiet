@@ -6,11 +6,11 @@ public class Barracks : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Controller.troopProductionMultiplier *= 1.1f;
+		if(GetComponent<CityBuilding>().wasBuilt)
+			Controller.troopProductionMultiplier += 1.1f; 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void OnDestroy() { 
+		Controller.troopProductionMultiplier /= 1.1f;
 	}
 }

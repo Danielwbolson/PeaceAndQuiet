@@ -13,9 +13,10 @@ public class emptyField : MonoBehaviour {
 
 	void Start() {
 		oldSprite = GetComponent<SpriteRenderer>().sprite;
-		if(transform.childCount != 0) {
+		if (transform.childCount != 0) {
 			isEmpty = false;
-		}
+		} else
+			GetComponent<SpriteRenderer>().enabled = false;
 	}
 
 	private void Update() {

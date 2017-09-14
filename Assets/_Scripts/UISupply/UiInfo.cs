@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class UiInfo : MonoBehaviour {
 
 	public GameObject InfoPanel;
 	private GameObject temp;
+	public LevelManager levelManager;
 
 	[HideInInspector]
 	public string foodsupply, woodsupply, metalsupply, stonesupply, popSupply;
@@ -20,6 +22,13 @@ public class UiInfo : MonoBehaviour {
 		metalsupply = "Metal: " + Controller.SupplyofMetal.ToString();
 		stonesupply = "Stone: " + Controller.SupplyofStone.ToString();
 		popSupply = "Pop: " + Controller.currPopulation.ToString() + "/" + Controller.maxPopulation.ToString();
+
+		if (Input.GetMouseButtonDown(1)) {
+			temp = GameObject.FindGameObjectWithTag("infoPanel");
+			if (temp != null) {
+				Destroy(temp.gameObject);
+			}
+		}
 	}
 
 	void IncreaseResources() {
@@ -35,5 +44,25 @@ public class UiInfo : MonoBehaviour {
 		} else {
 			Destroy(temp.gameObject);
 		}
+	}
+
+	public void OnClickReset() {
+		levelManager.GetComponent<Controller>().InitialResources();
+		if (SceneManager.GetActiveScene().name == "Field") {
+			foreach (GameObject RST in GameObject.FindGameObjectsWithTag("ResourceTile")) {
+				RST.transform.parent.GetComponent<emptyField>().isEmpty = true;
+				Destroy(RST);
+			}
+		}
+		else if(SceneManager.GetActiveScene().name == "City") {
+			foreach(GameObject CB in GameObject.FindGameObjectsWithTag("CityBuilding")) {
+				CB.transform.parent.GetComponent<emptyField>().isEmpty = true;
+				Destroy(CB);
+			}
+		}
+		Controller.NumOfFarms = 0;
+		Controller.NumOfLumberCamps = 0;
+		Controller.NumOfMines = 0;
+		Controller.NumOfQuarries = 0;
 	}
 }

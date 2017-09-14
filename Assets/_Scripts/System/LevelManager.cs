@@ -8,31 +8,16 @@ public class LevelManager : MonoBehaviour {
 	public GameObject DifficultyPanel;
 	public GameObject InfoPanel;
 
+	public string startingLevel;
+
 	void Start() {
-		if (SceneManager.GetActiveScene().name == "Field") {
-			GetComponent<SaveManager>().LoadScene();
-		}
+		GetComponent<SaveManager>().LoadScene();
 	}
 
-	public void LoadField()
-	{
-		SceneManager.LoadScene("Field", LoadSceneMode.Single);
-	}
-
-	public void LoadCastle()
+	public void LoadLevel(string name)
 	{
 		GetComponent<SaveManager>().SaveScene();
-		SceneManager.LoadScene("City", LoadSceneMode.Single);
-	}
-
-	public void LoadMap()
-	{
-		
-	}
-
-	public void LoadMenu()
-	{
-		
+		SceneManager.LoadScene(name, LoadSceneMode.Single);
 	}
 
 	public void SpawnDifficultyPanel() {
@@ -45,22 +30,22 @@ public class LevelManager : MonoBehaviour {
 
 	public void SelectEasy() {
 		Controller.Difficulty = "Easy";
-		LoadField();
+		LoadLevel(startingLevel);
 	}
 
 	public void SelectNormal() {
 		Controller.Difficulty = "Normal";
-		LoadField();
+		LoadLevel(startingLevel);
 	}
 
 	public void SelectHard() {
 		Controller.Difficulty = "Hard";
-		LoadField();
+		LoadLevel(startingLevel);
 	}
 
 	public void SelectInteresting() {
 		Controller.Difficulty = "Fun";
-		LoadField();
+		LoadLevel(startingLevel);
 	}
 
 	private void OnApplicationQuit() {

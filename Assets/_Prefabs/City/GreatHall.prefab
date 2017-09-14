@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114845324410903988}
   m_Layer: 0
   m_Name: GreatHall
-  m_TagString: Untagged
+  m_TagString: CityBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBusy: 0
   isEmpty: 0
+  whatBuildingIsThis: Great Hall
   BuildingMenu: {fileID: 0}
-  building: GreatHall
 --- !u!212 &212665578987718054
 SpriteRenderer:
   m_ObjectHideFlags: 1

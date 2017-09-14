@@ -22,8 +22,7 @@ public class BuildingStats : MonoBehaviour {
 		currStats = "This " + buildingName + " produces " + building.IndividualOutput.ToString() + " " + building.whatResource.ToString() + ".";
 		
 		if(building.nextBuilding != null) {
-			nextStats = "Upgraded, this " + buildingName + " will produce " + (building.IndividualOutput + 
-				building.nextBuilding.GetComponent<ResourceTile>().IndividualOutput).ToString() + " " + building.whatResource.ToString() + ".";
+			nextStats = "Upgraded, this " + buildingName + " will produce " + (building.nextBuilding.GetComponent<ResourceTile>().IndividualOutput).ToString() + " " + building.whatResource.ToString() + ".";
 		} else {
 			nextStats = "This " + buildingName + " is fully upgraded.";
 		}

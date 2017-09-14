@@ -6,6 +6,11 @@ public class House : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Controller.maxPopulation += 5;
+		if(GetComponent<CityBuilding>().wasBuilt)
+			Controller.maxPopulation += 5;
+	}
+
+	private void OnDestroy() {
+		Controller.maxPopulation -= 5;
 	}
 }

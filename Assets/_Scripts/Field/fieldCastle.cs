@@ -9,8 +9,8 @@ public class fieldCastle : MonoBehaviour {
 			if (Input.GetMouseButtonDown(0)) {
 				//save stats
 				//Switch scenes to Castle View
-				LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
-				levelManager.LoadCastle();
+				LevelManager levelManager = FindObjectOfType<LevelManager>();
+				levelManager.LoadLevel("City");
 			}
 		}
 	}

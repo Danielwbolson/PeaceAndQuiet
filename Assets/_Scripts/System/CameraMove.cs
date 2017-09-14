@@ -35,8 +35,7 @@ public class CameraMove : MonoBehaviour {
 		if(Input.GetMouseButtonDown(1)) {
 			origPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
 			origPos = cam.ScreenToWorldPoint(origPos);
-			Debug.Log(origPos);
-			isPanning = true;
+			isPanning = true; 
 		}
 	}
 	

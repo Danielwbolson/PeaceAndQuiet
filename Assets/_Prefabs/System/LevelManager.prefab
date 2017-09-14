@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DifficultyPanel: {fileID: 0}
   InfoPanel: {fileID: 118084, guid: 5176b00ac464c5940a4a2ac343e10da2, type: 2}
+  startingLevel: Field
 --- !u!114 &114204563237009662
 MonoBehaviour:
   m_ObjectHideFlags: 1

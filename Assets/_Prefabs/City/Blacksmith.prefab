@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114148926708610848}
   m_Layer: 0
   m_Name: Blacksmith
-  m_TagString: Untagged
+  m_TagString: CityBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBusy: 0
   isEmpty: 0
+  whatBuildingIsThis: Blacksmith
   BuildingMenu: {fileID: 0}
-  building: Blacksmith
 --- !u!114 &114963273806088632
 MonoBehaviour:
   m_ObjectHideFlags: 1

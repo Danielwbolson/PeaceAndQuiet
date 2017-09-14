@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114036777727691042}
   m_Layer: 0
   m_Name: Barracks
-  m_TagString: Untagged
+  m_TagString: CityBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,8 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBusy: 0
   isEmpty: 0
+  whatBuildingIsThis: Barracks
   BuildingMenu: {fileID: 0}
-  building: Barracks
 --- !u!114 &114713351735542756
 MonoBehaviour:
   m_ObjectHideFlags: 1

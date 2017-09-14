@@ -56,8 +56,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBusy: 0
   isEmpty: 0
+  whatBuildingIsThis: Castle
   BuildingMenu: {fileID: 0}
-  building: Castle
 --- !u!114 &114546051506281418
 MonoBehaviour:
   m_ObjectHideFlags: 1

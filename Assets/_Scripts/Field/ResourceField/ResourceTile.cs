@@ -13,7 +13,7 @@ public class ResourceTile : MonoBehaviour {
 	public GameObject upgradeMenu;
 	public GameObject nextBuilding;
 	public LayerMask layerMask;
-	public bool wasBuilt = false;
+	public bool wasBuilt = true;
 
 	void Start() {
 		if (!wasBuilt) {
@@ -52,12 +52,17 @@ public class ResourceTile : MonoBehaviour {
 	void OnDestroy() {
 		if (whatResource == "food") {
 			Controller.foodSupplyRate -= IndividualOutput;
+			if (Controller.NumOfFarms > 0) Controller.NumOfFarms -= 1;
 		} else if (whatResource == "wood") {
 			Controller.woodSupplyRate -= IndividualOutput;
+			if(Controller.NumOfLumberCamps > 0) Controller.NumOfLumberCamps -= 1 ;
 		} else if (whatResource == "metal") {
 			Controller.metalSupplyRate -= IndividualOutput;
+			if (Controller.NumOfMines > 0) Controller.NumOfMines -= 1;
 		} else if (whatResource == "stone") {
 			Controller.stoneSupplyRate -= IndividualOutput;
+			if (Controller.NumOfQuarries > 0) Controller.NumOfQuarries -= 1;
 		}
+		Controller.currPopulation -= plusPopulation;
 	}
 }
