@@ -161,6 +161,7 @@ MonoBehaviour:
   woodNum: 
   metalNum: 
   stoneNum: 
+  troopRate: 
 --- !u!114 &114914690513011894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -599.5, y: 330.5}
-  m_SizeDelta: {x: -1601, y: -738.9}
+  m_AnchoredPosition: {x: -411, y: 342.5}
+  m_SizeDelta: {x: -1622, y: -765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224656951220354392
 RectTransform:

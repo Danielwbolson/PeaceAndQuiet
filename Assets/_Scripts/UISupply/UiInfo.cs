@@ -60,9 +60,5 @@ public class UiInfo : MonoBehaviour {
 				Destroy(CB);
 			}
 		}
-		Controller.NumOfFarms = 0;
-		Controller.NumOfLumberCamps = 0;
-		Controller.NumOfMines = 0;
-		Controller.NumOfQuarries = 0;
 	}
 }

@@ -22,7 +22,6 @@ public class SaveManager : MonoBehaviour {
 			ResourceTile[] resourceTiles = FindObjectsOfType<ResourceTile>();
 			numOfResourceTiles = resourceTiles.Length;
 
-
 			List<ResourceFieldData> resourceData = new List<ResourceFieldData>();
 
 			for (int k = 0; k < numOfResourceTiles; k++) {

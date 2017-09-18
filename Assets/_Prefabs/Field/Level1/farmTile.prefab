@@ -74,9 +74,13 @@ MonoBehaviour:
   WhatLevel: 1
   IndividualOutput: 5
   plusPopulation: 4
+  UI: {fileID: 118084, guid: 5176b00ac464c5940a4a2ac343e10da2, type: 2}
   upgradeMenu: {fileID: 114954, guid: 6e5b6e7f6a5789a48b0395e740d7b547, type: 2}
   nextBuilding: {fileID: 195988, guid: 0e67197c544b64a4fb3cbcf5ee8007d2, type: 2}
-  emptyFieldPrefab: {fileID: 128140, guid: e500c438394302d47b702867e92681f8, type: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wasBuilt: 1
 --- !u!212 &21215112
 SpriteRenderer:
   m_ObjectHideFlags: 1

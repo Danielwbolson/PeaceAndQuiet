@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class emptyField : MonoBehaviour {
 	public GameObject MenuPanel;
@@ -24,14 +25,13 @@ public class emptyField : MonoBehaviour {
 			transform.GetComponent<SpriteRenderer>().enabled = false;
 		} else transform.GetComponent<SpriteRenderer>().enabled = true;
 	}
+
 	void OnMouseOver() {
-		//Debug.Log("Over empty field");
-		if(GameObject.FindGameObjectWithTag("Menu") == null) {
-			if(Input.GetMouseButtonDown(0)) {
-				if(isEmpty) {
-					//let player build something
-					//click to bring up interface to see what can be built
-					Instantiate(MenuPanel, Vector3.zero, Quaternion.identity);
+		if (!EventSystem.current.IsPointerOverGameObject()) {
+			Debug.Log("Over empty field");
+			if (GameObject.FindGameObjectWithTag("Menu") == null) {
+				if (Input.GetMouseButtonDown(0) && isEmpty) {
+					Instantiate(MenuPanel, Vector3.zero, Quaternion.identity); 
 					Controller.whatWasClicked = gameObject;
 				} else {
 					Debug.Log("You cannot build");

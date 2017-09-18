@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class ResourceTile : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class ResourceTile : MonoBehaviour {
 	public float IndividualOutput;
 
 	public int plusPopulation = 4;
-	
+
 	public GameObject upgradeMenu;
 	public GameObject nextBuilding;
 	public LayerMask layerMask;
@@ -44,7 +45,7 @@ public class ResourceTile : MonoBehaviour {
 
 	void OnMouseOver() {
 		//Debug.Log("over resource");
-		if(Input.GetMouseButtonDown(0) && GameObject.FindGameObjectWithTag("Menu") == null) {
+		if (Input.GetMouseButtonDown(0) && GameObject.FindGameObjectWithTag("Menu") == null) {
 			Controller.whatWasClicked = gameObject;
 			Instantiate(upgradeMenu, Vector3.zero, Quaternion.identity);
 		}
@@ -63,6 +64,7 @@ public class ResourceTile : MonoBehaviour {
 			Controller.stoneSupplyRate -= IndividualOutput;
 			if (Controller.NumOfQuarries > 0) Controller.NumOfQuarries -= 1;
 		}
-		Controller.currPopulation -= plusPopulation;
+		if(Controller.currPopulation > 0)
+			Controller.currPopulation -= plusPopulation;
 	}
 }

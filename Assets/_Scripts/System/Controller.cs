@@ -28,29 +28,21 @@ public class Controller : MonoBehaviour {
 			SupplyofWood = 800f;
 			SupplyofMetal = 400f;
 			SupplyofStone = 200f;
-			currPopulation = 5;
-			maxPopulation = 20;
 		} else if (Difficulty == "Normal") {
 			SupplyofFood = 200f;
 			SupplyofWood = 400f;
 			SupplyofMetal = 200f;
 			SupplyofStone = 100f;
-			//currPopulation = 5;
-			maxPopulation = 20;
 		} else if (Difficulty == "Hard") {
 			SupplyofFood = 50f;
 			SupplyofWood = 200f;
 			SupplyofMetal = 50f;
 			SupplyofStone = 0f;
-			currPopulation = 5;
-			maxPopulation = 20;
 		} else if (Difficulty == "Fun") {
 			SupplyofFood = 10000f;
 			SupplyofWood = 10000f;
 			SupplyofMetal = 10000f;
 			SupplyofStone = 10000f;
-			currPopulation = 5;
-			maxPopulation = 20;
 		}
 	}
 }

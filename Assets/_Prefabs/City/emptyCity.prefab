@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuPanel: {fileID: 1894777996954184, guid: 77f702b5ab5ef0e4789145468292501f, type: 2}
   newSprite: {fileID: 21300000, guid: 02e1389c6ad86a247a555feda19235b2, type: 3}
+  UI: {fileID: 118084, guid: 5176b00ac464c5940a4a2ac343e10da2, type: 2}
   isEmpty: 1
 --- !u!212 &212640152227677874
 SpriteRenderer:
